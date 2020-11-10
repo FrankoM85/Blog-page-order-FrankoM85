@@ -10,12 +10,28 @@
 
 <body>
   <a href="">Home</a>
-  <div class="divregistration">
-    <input type="text">Username
-    <input type="password">Password
-    <input type="email">email@email.com
-    <button id="buttonregistration">Registration</button>
-  </div>
+
+  <h1>Registration details</h1>
+
+  <form>
+    <div class="form-group">
+      <label for="inputUsername">Username</label>
+      <input type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="inputPassword">Password</label>
+      <input type="password" class="form-control" id="inputPassword">
+    </div>
+    <div class="form-group">
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" id="inputEmail">
+    </div>
+    <div class="form-group">
+      <label for="inputFormControlFile">Choose a photo</label>
+      <input type="file" class="form-control-file" id="inputFormControlFile">
+    </div>    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
 
 </body>
