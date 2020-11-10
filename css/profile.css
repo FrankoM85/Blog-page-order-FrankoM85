@@ -1,0 +1,18 @@
+img {
+    height: 200px; margin-left: 10px;
+}
+.profileGroup {padding: 5px; }
+input { width: 200px;}
+#user-name {margin-left: 12px;}
+#password {margin-left: 19px;}
+#name {margin-left: 42px;}
+#birthDate {margin-left: 17px}
+#userImage {vertical-align: top; }
+
+.button {padding: 5px; 
+    color: white; 
+    background-color: rgb(181, 214, 105); line-height: 35px;
+}
+
+.formInfo {background-color: rgb(181, 214, 105);}
+.formEdit {background-color: rgb(218, 219, 141);}
