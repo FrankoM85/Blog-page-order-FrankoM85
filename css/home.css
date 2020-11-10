@@ -1,24 +1,25 @@
 body {
     font-family: "Lato", sans-serif;
+    background-image: url("https://image.freepik.com/free-photo/white-cloud-sky-background_74190-4646.jpg");
+    background-size: cover;
   }
   
   .sidenav {
     height: 100%;
-    width: 140px;
+    width: 120px;
     position: fixed;
     z-index: 1;
-    top: 10;
     right: 0;
     background-color: #111;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 100px;
   }
   
   .sidenav a {
     float: right;
-    padding: 6px 8px 6px 16px;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
   }
@@ -27,25 +28,90 @@ body {
     color: #f1f1f1;
   }
 
-  .topnav {
-    background-color: #111;
-    overflow: hidden;
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #111;
+  overflow: auto;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
-.topnav a {
-    float: left;
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;color: #818181;
-    text-align: center;  
+/* Navbar links */
+.navbar a {
+  text-align: center;
+  padding: 12px;
+  color: #818181;
+  text-decoration: none;
+  font-size: 22px;
 }
 
-.topnav a:hover {
-    color: #f1f1f1;
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  color: #f1f1f1;
 }
 
-.topnav-right {
+.navbar-left {
+  float: left;
+}
+
+.navbar-right {
   float: right;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.footer {
+   font-size: 14px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: lightgray;
+   color: #111;
+   text-align: center;
+}
+
+.footer a {
+   padding: 15px;
+   color: #111;
+   text-align: center;
+}
+
+.footer a:hover {
+   color: blue;
+}
+
+.content {
+    padding: 20px;
+    text-align: left;  
+    top: 10px;
+    left: 20px;
+    background: white;
+    margin: auto;
+    position: relative; /*Added this*/
+    width: 80%;
+    display: flexbox;
+    background-color: lightyellow;
+}
+
+#blogpost {
+    color: #111;
+    padding: 20px;
+    text-align: left;  
+    top: 10px;
+    left: 50px;
+    background: lightgrey;
+    margin: auto;
+    position: relative; /*Added this*/
+    width: 100%;
 }
