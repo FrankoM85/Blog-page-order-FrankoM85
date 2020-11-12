@@ -1,16 +1,19 @@
 body {
   background-image: url(/img/blog.jpg);
   background-size: 100% auto;
+  font-family: sans-serif;
 }
 h1 {
   color: white;
 }
 
 form {
+  font-family: sans-serif;
   background-color: gray;
   position: center;
   width: 200px;
   height: 300px;
+  text-align: center;
 }
 a {
   padding: 20 5 5 10;
