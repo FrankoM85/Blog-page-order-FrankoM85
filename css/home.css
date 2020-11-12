@@ -10,7 +10,7 @@ body {
     position: fixed;
     z-index: 1;
     right: 0;
-    background-color: #111;
+    background-color: rgb(49, 47, 47);
     overflow-x: hidden;
     padding-top: 100px;
   }
@@ -119,11 +119,12 @@ body {
     width: 70vw;
     flex-direction: column;
     border: 2px dotted gray;
-    justify-content: center;   
+    justify-content: center;
 }
 
 #title {
     font-family: fantasy, sans-serif;
     color: darkmagenta;
     font-size: 40px;
+    border-bottom: solid plum;
 }
