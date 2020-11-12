@@ -1,10 +1,20 @@
 body {
-  background-color: #ecd8d8;
+  background-image: url(/img/blog.jpg);
+  background-size: 100% auto;
 }
+h1 {
+  color: white;
+}
+
 form {
-  background-color: #251994;
+  background-color: gray;
   position: center;
+  width: 200px;
+  height: 300px;
 }
 a {
   padding: 20 5 5 10;
+}
+img {
+  width: 100px;
 }
