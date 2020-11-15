@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile page</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <a class=button href="home.html">Home Page</a>
+
+   <div class="divEdit"> 
+        <h2>User Information</h2>
+        <div class="profileGroup"> <label>User name</label>
+            <input id="user-name" type="text" value="alitoth" />
+        </div>
+        <div class="profileGroup"> <label>Password</label>
+            <input id="password" type="password" value="atoth" />
+        </div>
+        <div class="profileGroup"> <label>Name</label>
+            <input id="name" type="text" value="Tóth Aladár" />
+        </div>
+        <div class="profileGroup"> <label>Birth date</label>
+            <input id="birthDate" type="date" value="1988-01-01" />
+        </div>
+        <div class="profileGroup"> <label>User address</label>
+            <input id="address" type="text" value="1224 Budapest, Tündér utca 3." />
+        </div>
+        <div class="profileGroup"> <label id="userImage">User image</label>
+            <img id="man" src="img/man.jpg.jpg" alt="Tóth Aladár"></div>
+      
+     <form class="btn" action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit"></form>
+        <form class=btn method="get" action="user-info.html">
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
+</body>
+
+</html>
