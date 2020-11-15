@@ -10,7 +10,7 @@ body {
     position: fixed;
     z-index: 1;
     right: 0;
-    background-color: rgb(49, 47, 47);
+    background-color: rgb(49, 47, 47, 0.5);
     overflow-x: hidden;
     padding-top: 100px;
   }
@@ -20,13 +20,26 @@ body {
     padding: 0.5rem 1rem;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: white;
     display: block;
   }
   
   .sidenav a:hover {
-    color: yellow;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px rgb(232, 248, 1), 0 0 40px rgb(232, 248, 1);
   }
+  
+  to {
+    text-shadow: 0 0 20px yellow, 0 0 30px rgb(229, 255, 83), 0 0 40px rgb(229, 255, 83), 0 0 50px rgb(229, 255, 83);
+  }
+}
 
 /* Style the navigation bar */
 .navbar {
@@ -43,15 +56,28 @@ body {
 /* Navbar links */
 .navbar a {
   text-align: center;
-  padding: 12px;
-  color: #818181;
+  padding: 10px;
+  color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
+  margin-right: 20px;
 }
 
 /* Navbar links on mouse-over */
 .navbar a:hover {
-  color: yellow;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px rgb(232, 248, 1), 0 0 40px rgb(232, 248, 1);
+  }
+  
+  to {
+    text-shadow: 0 0 20px yellow, 0 0 30px rgb(229, 255, 83), 0 0 40px rgb(229, 255, 83), 0 0 50px rgb(229, 255, 83);
+  }
 }
 
 .navbar-left {
@@ -71,28 +97,64 @@ body {
 }
 
 .footer {
+   display: grid;
+   grid-template-columns: 250px 250px 250px 100px 100px;
+   grid-template-rows: 1fr 1fr;
+   justify-content: space-evenly;
    font-size: 14px;
-   position: fixed;
-   left: 0;
+   position: relative;
+   right: 0;
    bottom: 0;
-   width: 100vw;
+   left: 0;
+   width: 90vw;
    background-color: lightgray;
    color: #111;
    text-align: center;
+   margin: 0;
+   overflow: wrap;
 }
 
 .footer a {
-   padding: 15px;
    color: #111;
    text-align: center;
+   text-decoration: none;
 }
 
 .footer a:hover {
    color: blue;
 }
 
+#reg {
+   background-color: lightblue;
+   font-size: 14px;
+   line-height: 25px;
+   text-decoration: underline;
+   border: darkgoldenrod solid 2px;
+   border-radius: 15px;
+}
+
+#login {
+   background-color: lightblue;
+   font-size: 14px;
+   line-height: 25px;
+   text-decoration: underline;
+   border: darkgoldenrod solid 2px;
+   border-radius: 15px;
+}
+
+.footer p {
+   font-size: 12px;
+   justify-content: center;
+   color: darkblue;
+   text-align: center;
+   margin: auto;
+   grid-column: 1 / span 5;
+}
+
 .content {
-    display: flexbox;  
+    display: grid;
+    grid-column: auto auto;
+    grid-gap: 20px;
     padding: 20px;
     text-align: center;  
     top: 50px;
@@ -102,24 +164,44 @@ body {
     background-color: lightyellow;
     border: 10px ridge goldenrod;
     background-image: url("/img/blog_background.png");
-
-    
+    border-radius: 15px;
+    min-height: 100vh;
 }
 
-#blogpost {
-    display: flex;
-    color: #111;
+.blogpost {
+    display: grid;
+    grid-template-columns: 150px auto;
     padding: 20px;
-    text-align: left;  
-    /*top: 10px;
-    left: 10px;*/
-    background: lightyellow;
     margin: auto;
+    background: rgba(252, 252, 214, 0.7);
     position: relative; /*Added this*/
     width: 70vw;
-    flex-direction: column;
-    border: 2px dotted gray;
-    justify-content: center;
+    border: 2px solid rgb(250, 183, 58);
+    border-radius: 30px;
+}
+
+#post-1 {
+    /*border: 2px solid red;*/
+}
+
+.post-1 ul {
+  font-weight: bold;
+  text-align: left;
+  list-style-type: none;
+  margin-left:-15px;
+}
+
+.post-1 ul li {
+  margin-top: 10px;
+  margin-right: 15px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.title {
+  display: grid;
+  width: 50%;
+  margin: auto;
 }
 
 #title {
